@@ -1,9 +1,11 @@
 <h1>Results page</h1>
 
 <ul>
+<!-- starts for loop for each movie returned in API request-->
 <% data["Search"].forEach(function(movie) { %>
 
  <li> 
+ <!-- displays title with link to imdb page and year made-->
  <strong><a href="https://www.imdb.com/title/<%= movie["imdbID"] %>/"><%= movie["Title"] %></a></strong>
   - <%= movie["Year"] %>
  </li>
@@ -11,4 +13,5 @@
 <% }) %>
 </ul>
 
+<!-- head back to search page -->
 <a href="/">back</a>
